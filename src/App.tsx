@@ -8,13 +8,15 @@ import "./App.css";
 const App = () => {
   return (
     <Canvas>
-      <directionalLight position={[0, 0, 2]} />
-      <ambientLight />
+      <directionalLight position={[0, 0, 2]} intensity={2} />
+      <ambientLight intensity={1.4} />
 
-      <Box position={new Vector3(1, 1, 0)} size={[1, 1, 1]} color="blue" />
-      <Box position={new Vector3(1, -1, 0)} size={[1, 1, 1]} color="red" />
-      <Box position={new Vector3(-1, 1, 0)} size={[1, 1, 1]} color="green" />
-      <Box position={new Vector3(-1, -1, 0)} size={[1, 1, 1]} color="orange" />
+      <group position={[-1, 0, 0]}>
+        <Box position={new Vector3(1, 1, 0)} size={[1, 1, 1]} color="blue" />
+        <Box position={new Vector3(1, -1, 0)} size={[1, 1, 1]} color="red" />
+        <Box position={new Vector3(-1, 1, 0)} size={[1, 1, 1]} color="green" />
+        <Box position={new Vector3(-1, -1, 0)} size={[1, 1, 1]} color="orange" />
+      </group>
     </Canvas>
   );
 };
