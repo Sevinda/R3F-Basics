@@ -1,12 +1,12 @@
 import { Canvas } from "@react-three/fiber";
 import { Vector3 } from "three";
 
-// import Box from "./components/Box";
 import Sphere from "./components/Sphere";
+// import Box from "./components/Box";
+// import Torus from "./components/Torus";
+// import TorusKnot from "./components/TorusKnot";
 
 import "./App.css";
-import Torus from "./components/Torus";
-import TorusKnot from "./components/TorusKnot";
 
 const App = () => {
   return (
@@ -19,8 +19,9 @@ const App = () => {
         args={[1, 30, 30]}
         color="orange"
       />
-      <Torus position={new Vector3(2, 0, 0)} args={[0.8, 0.1, 30, 30]} color="blue" />
-      <TorusKnot position={new Vector3(-2, 0, 0)} args={[0.5, 0.1, 1000, 50]} color="red" />
+
+      {/* <Torus position={new Vector3(2, 0, 0)} args={[0.8, 0.1, 30, 30]} color="blue" />
+      <TorusKnot position={new Vector3(-2, 0, 0)} args={[0.5, 0.1, 1000, 50]} color="red" /> */}
 
       {/* <Box position={new Vector3(0, 0, 0)} args={[1, 1, 1]} color="orange" /> */}
 
