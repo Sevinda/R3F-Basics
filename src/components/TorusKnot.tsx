@@ -20,8 +20,8 @@ const TorusKnot = ({ position, args, color }: Props) => {
   return (
     <mesh position={position}>
       <torusKnotGeometry args={args} />
-      <MeshDistortMaterial distort={1} speed={1} color={color} />
-      {/* <MeshWobbleMaterial factor={2} speed={2} color={color} /> */}
+      <MeshWobbleMaterial factor={2} speed={2} color={color} />
+      {/* <MeshDistortMaterial distort={1} speed={1} color={color} /> */}
       {/* <meshStandardMaterial color={color} /> */}
     </mesh>
   );
