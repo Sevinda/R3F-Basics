@@ -1,6 +1,7 @@
-import { useFrame } from "@react-three/fiber";
-import { useRef } from "react";
+import { MeshDistortMaterial, MeshWobbleMaterial } from "@react-three/drei";
 import { Vector3 } from "three";
+// import { useFrame } from "@react-three/fiber";
+// import { useRef } from "react";
 
 interface Props {
   position: Vector3;
@@ -16,15 +17,12 @@ interface Props {
 }
 
 const TorusKnot = ({ position, args, color }: Props) => {
-  const ref = useRef<any>();
-  useFrame((state, delta) => {
-    ref.current.rotation.x += delta;
-    ref.current.rotation.y += delta * 2;
-  });
   return (
-    <mesh position={position} ref={ref}>
+    <mesh position={position}>
       <torusKnotGeometry args={args} />
-      <meshStandardMaterial color={color} />
+      <MeshDistortMaterial distort={1} speed={1} color={color} />
+      {/* <MeshWobbleMaterial factor={2} speed={2} color={color} /> */}
+      {/* <meshStandardMaterial color={color} /> */}
     </mesh>
   );
 };
